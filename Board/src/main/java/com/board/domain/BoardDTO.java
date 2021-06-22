@@ -2,9 +2,14 @@ package com.board.domain;
 
 import java.time.LocalDateTime;
 
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.annotation.JsonRootName;
+
 import lombok.Getter;
 import lombok.Setter;
 
+@JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
+@JsonRootName(value = "data")
 @Getter
 @Setter
 public class BoardDTO {
